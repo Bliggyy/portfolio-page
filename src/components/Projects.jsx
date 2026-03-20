@@ -1,4 +1,4 @@
-import styles from './Projects.module.css'
+import styles from '../styles/Projects.module.css'
 
 const projects = [
   {

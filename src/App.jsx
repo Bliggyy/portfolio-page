@@ -3,7 +3,7 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
-import styles from './App.module.css'
+import styles from './styles/App.module.css'
 
 export default function App() {
   return (
