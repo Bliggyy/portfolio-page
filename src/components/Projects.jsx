@@ -1,3 +1,5 @@
+import styles from './Projects.module.css'
+
 const projects = [
   {
     id: 1,
@@ -9,7 +11,11 @@ const projects = [
     demoUrl: '#',
     status: 'In progress',
     thumbPattern: (
-      <svg viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.35 }}>
+      <svg
+        viewBox="0 0 600 200"
+        preserveAspectRatio="xMidYMid slice"
+        className={styles.thumbPatternSvg}
+      >
         <defs>
           <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
             <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1916" strokeWidth="0.5" />
@@ -33,7 +39,11 @@ const projects = [
     demoUrl: '#',
     status: 'In progress',
     thumbPattern: (
-      <svg viewBox="0 0 300 180" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.35 }}>
+      <svg
+        viewBox="0 0 300 180"
+        preserveAspectRatio="xMidYMid slice"
+        className={styles.thumbPatternSvg}
+      >
         <defs>
           <pattern id="dots2" width="20" height="20" patternUnits="userSpaceOnUse">
             <circle cx="2" cy="2" r="1.2" fill="#1a1916" />
@@ -56,7 +66,11 @@ const projects = [
     demoUrl: '#',
     status: 'In progress',
     thumbPattern: (
-      <svg viewBox="0 0 300 180" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.35 }}>
+      <svg
+        viewBox="0 0 300 180"
+        preserveAspectRatio="xMidYMid slice"
+        className={styles.thumbPatternSvg}
+      >
         <defs>
           <pattern id="diag3" width="16" height="16" patternUnits="userSpaceOnUse">
             <path d="M 0 16 L 16 0" stroke="#1a1916" strokeWidth="0.5" fill="none" />
@@ -79,102 +93,45 @@ const ArrowIcon = () => (
 
 function SectionHead({ label }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
-      <span style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-faint)', whiteSpace: 'nowrap' }}>
+    <div className={styles.sectionHead}>
+      <span className={styles.sectionLabel}>
         {label}
       </span>
-      <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+      <div className={styles.sectionRule} />
     </div>
   )
 }
 
 function ProjectCard({ project }) {
-  const thumbAspect = project.featured ? '16 / 7' : '16 / 9'
-
   return (
     <div
-      style={{
-        background: '#fff',
-        border: '1px solid var(--border)',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        transition: 'transform 0.25s ease, box-shadow 0.25s ease',
-        gridColumn: project.featured ? 'span 2' : 'span 1',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.transform = 'translateY(-4px)'
-        e.currentTarget.style.boxShadow = '0 12px 40px rgba(26,25,22,0.08)'
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.transform = 'translateY(0)'
-        e.currentTarget.style.boxShadow = 'none'
-      }}
+      className={`${styles.card} ${project.featured ? styles.cardFeatured : styles.cardRegular}`}
     >
       {/* Thumbnail */}
-      <div style={{
-        width: '100%',
-        aspectRatio: thumbAspect,
-        background: 'var(--paper-mid)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderBottom: '1px solid var(--border)',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
+      <div className={`${styles.thumb} ${project.featured ? styles.thumbFeatured : styles.thumbRegular}`}>
         {project.thumbPattern}
-        <span style={{
-          fontSize: '12px',
-          color: 'var(--ink-faint)',
-          letterSpacing: '0.05em',
-          position: 'relative',
-          zIndex: 1,
-          background: 'rgba(247,245,240,0.8)',
-          padding: '6px 14px',
-          borderRadius: '100px',
-          border: '1px solid var(--border)',
-        }}>
+        <span className={styles.thumbNote}>
           Screenshot coming soon
         </span>
       </div>
 
       {/* Body */}
-      <div style={{ padding: '1.25rem 1.5rem 1.5rem' }}>
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '6px',
-          fontSize: '11px',
-          letterSpacing: '0.06em',
-          textTransform: 'uppercase',
-          color: '#92651a',
-          background: '#fdf3dc',
-          padding: '3px 10px',
-          borderRadius: '100px',
-          marginBottom: '0.75rem',
-        }}>
-          <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#c8871f', display: 'inline-block' }} />
+      <div className={styles.cardBody}>
+        <div className={styles.statusPill}>
+          <span className={styles.statusDot} />
           {project.status}
         </div>
 
-        <p style={{ fontFamily: "'Lora', serif", fontSize: '19px', fontWeight: '500', letterSpacing: '-0.02em', marginBottom: '0.5rem', lineHeight: '1.3' }}>
+        <p className={styles.projectTitle}>
           {project.title}
         </p>
-        <p style={{ fontSize: '14px', fontWeight: '300', color: 'var(--ink-muted)', lineHeight: '1.7', marginBottom: '1.25rem' }}>
+        <p className={styles.projectDescription}>
           {project.description}
         </p>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '1.25rem' }}>
+        <div className={styles.tagList}>
           {project.tags.map(tag => (
-            <span key={tag} style={{
-              fontSize: '11px',
-              fontWeight: '500',
-              padding: '4px 10px',
-              borderRadius: '6px',
-              background: 'var(--paper-mid)',
-              color: 'var(--ink-muted)',
-              letterSpacing: '0.02em',
-            }}>
+            <span key={tag} className={styles.tag}>
               {tag}
             </span>
           ))}
@@ -182,18 +139,7 @@ function ProjectCard({ project }) {
 
         <a
           href={project.demoUrl}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '6px',
-            fontSize: '13px',
-            fontWeight: '500',
-            color: 'var(--accent)',
-            textDecoration: 'none',
-            transition: 'gap 0.2s',
-          }}
-          onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-          onMouseLeave={e => e.currentTarget.style.gap = '6px'}
+          className={styles.demoLink}
         >
           Live demo coming soon <ArrowIcon />
         </a>
@@ -204,13 +150,9 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   return (
-    <section id="projects" style={{ marginBottom: '6rem' }} className="fade-up fade-up-3">
+    <section id="projects" className={`fade-up fade-up-3 ${styles.section}`}>
       <SectionHead label="Selected projects" />
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-        gap: '1.25rem',
-      }}>
+      <div className={styles.grid}>
         {projects.map(p => <ProjectCard key={p.id} project={p} />)}
       </div>
     </section>

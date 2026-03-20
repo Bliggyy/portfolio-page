@@ -1,0 +1,95 @@
+.section {
+  margin-bottom: 7rem;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 1.75rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+
+.h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.em {
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.bio {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--ink-muted);
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 11px 22px;
+  border: 1px solid var(--border-mid);
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btnGhost:hover {
+  background: var(--paper-dark);
+  transform: translateY(-1px);
+}
+

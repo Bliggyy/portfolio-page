@@ -1,0 +1,63 @@
+.section {
+  border-top: 1px solid var(--border);
+  padding: 4rem 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: 'Lora', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.primaryButton:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 11px 22px;
+  border: 1px solid var(--border-mid);
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.secondaryButton:hover {
+  background: var(--paper-dark);
+  transform: translateY(-1px);
+}
+

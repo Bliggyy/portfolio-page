@@ -1,3 +1,5 @@
+import styles from './Skills.module.css'
+
 const skillGroups = [
   {
     label: 'Frontend',
@@ -19,43 +21,28 @@ const skillGroups = [
 
 function SectionHead({ label }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
-      <span style={{ fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-faint)', whiteSpace: 'nowrap' }}>
+    <div className={styles.sectionHead}>
+      <span className={styles.sectionLabel}>
         {label}
       </span>
-      <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+      <div className={styles.sectionRule} />
     </div>
   )
 }
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ marginBottom: '6rem' }} className="fade-up fade-up-4">
+    <section id="skills" className={`fade-up fade-up-4 ${styles.section}`}>
       <SectionHead label="Skills & tools" />
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-        gap: '1rem',
-      }}>
+      <div className={styles.grid}>
         {skillGroups.map(group => (
-          <div key={group.label} style={{
-            background: '#fff',
-            border: '1px solid var(--border)',
-            borderRadius: '14px',
-            padding: '1.25rem',
-          }}>
-            <p style={{
-              fontSize: '11px',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--ink-faint)',
-              marginBottom: '0.75rem',
-            }}>
+          <div key={group.label} className={styles.groupCard}>
+            <p className={styles.groupLabel}>
               {group.label}
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <div className={styles.skillList}>
               {group.skills.map(skill => (
-                <span key={skill} style={{ fontSize: '14px', color: 'var(--ink)' }}>{skill}</span>
+                <span key={skill} className={styles.skillItem}>{skill}</span>
               ))}
             </div>
           </div>
