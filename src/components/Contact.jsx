@@ -1,14 +1,13 @@
-import styles from '../styles/Contact.module.css'
+import styles from "../styles/Contact.module.css";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className={`fade-up fade-up-5 ${styles.section}`}
-    >
+    <section id="contact" className={`fade-up fade-up-5 ${styles.section}`}>
       <div>
         <h2 className={styles.title}>
-          Let's work<br />together.
+          Let's work
+          <br />
+          together.
         </h2>
         <p className={styles.subtitle}>
           Open to new opportunities and collaborations.
@@ -16,10 +15,7 @@ export default function Contact() {
       </div>
 
       <div className={styles.actions}>
-        <a
-          href="mailto:your@email.com"
-          className={styles.primaryButton}
-        >
+        <a href="mailto:your@email.com" className={styles.primaryButton}>
           Send an email
         </a>
         <a
@@ -32,5 +28,5 @@ export default function Contact() {
         </a>
       </div>
     </section>
-  )
+  );
 }
