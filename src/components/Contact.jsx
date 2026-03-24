@@ -15,11 +15,14 @@ export default function Contact() {
       </div>
 
       <div className={styles.actions}>
-        <a href="mailto:your@email.com" className={styles.primaryButton}>
+        <a
+          href="mailto:bligh.ignacio23@gmail.com"
+          className={styles.primaryButton}
+        >
           Send an email
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/bligh-stian-ignacio/"
           target="_blank"
           rel="noreferrer"
           className={styles.secondaryButton}
