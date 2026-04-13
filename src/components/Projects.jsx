@@ -8,7 +8,7 @@ const projects = [
     description:
       "A game-oriented order management system built with ASP.NET Core and React. Handles order creation, tracking, and fulfillment flows through a clean REST API with a React front end.",
     tags: ["ASP.NET Core", "React", "C#", "REST API"],
-    demoUrl: "#",
+    demoUrl: "https://bliggy-gamestore.vercel.app",
     status: "In progress",
     thumbPattern: (
       <svg
@@ -67,127 +67,127 @@ const projects = [
       </svg>
     ),
   },
-  {
-    id: 2,
-    featured: false,
-    title: "Inventory Management System",
-    description:
-      "A multi-user inventory platform built with Laravel and React. Features role-based access, real-time stock tracking, and full CRUD operations.",
-    tags: ["Laravel", "React", "PHP", "MySQL"],
-    demoUrl: "#",
-    status: "In progress",
-    thumbPattern: (
-      <svg
-        viewBox="0 0 300 180"
-        preserveAspectRatio="xMidYMid slice"
-        className={styles.thumbPatternSvg}
-      >
-        <defs>
-          <pattern
-            id="dots2"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <circle cx="2" cy="2" r="1.2" fill="#1a1916" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#dots2)" />
-        <rect
-          x="60"
-          y="40"
-          width="80"
-          height="50"
-          rx="6"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.8"
-        />
-        <rect
-          x="160"
-          y="60"
-          width="80"
-          height="50"
-          rx="6"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.8"
-        />
-        <line
-          x1="140"
-          y1="65"
-          x2="160"
-          y2="75"
-          stroke="#1a1916"
-          strokeWidth="0.7"
-        />
-      </svg>
-    ),
-  },
-  {
-    id: 3,
-    featured: false,
-    title: "Web Scraper",
-    description:
-      "A Python-based web scraper that extracts, parses, and structures data from target websites — built for reliability and easy extension to new sources.",
-    tags: ["Python", "BeautifulSoup", "Requests"],
-    demoUrl: "#",
-    status: "In progress",
-    thumbPattern: (
-      <svg
-        viewBox="0 0 300 180"
-        preserveAspectRatio="xMidYMid slice"
-        className={styles.thumbPatternSvg}
-      >
-        <defs>
-          <pattern
-            id="diag3"
-            width="16"
-            height="16"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 0 16 L 16 0"
-              stroke="#1a1916"
-              strokeWidth="0.5"
-              fill="none"
-            />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#diag3)" />
-        <rect
-          x="40"
-          y="50"
-          width="220"
-          height="14"
-          rx="3"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.8"
-        />
-        <rect
-          x="40"
-          y="76"
-          width="160"
-          height="14"
-          rx="3"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.8"
-        />
-        <rect
-          x="40"
-          y="102"
-          width="190"
-          height="14"
-          rx="3"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.8"
-        />
-      </svg>
-    ),
-  },
+  // {
+  //   id: 2,
+  //   featured: false,
+  //   title: "Inventory Management System",
+  //   description:
+  //     "A multi-user inventory platform built with Laravel and React. Features role-based access, real-time stock tracking, and full CRUD operations.",
+  //   tags: ["Laravel", "React", "PHP", "MySQL"],
+  //   demoUrl: "#",
+  //   status: "In progress",
+  //   thumbPattern: (
+  //     <svg
+  //       viewBox="0 0 300 180"
+  //       preserveAspectRatio="xMidYMid slice"
+  //       className={styles.thumbPatternSvg}
+  //     >
+  //       <defs>
+  //         <pattern
+  //           id="dots2"
+  //           width="20"
+  //           height="20"
+  //           patternUnits="userSpaceOnUse"
+  //         >
+  //           <circle cx="2" cy="2" r="1.2" fill="#1a1916" />
+  //         </pattern>
+  //       </defs>
+  //       <rect width="100%" height="100%" fill="url(#dots2)" />
+  //       <rect
+  //         x="60"
+  //         y="40"
+  //         width="80"
+  //         height="50"
+  //         rx="6"
+  //         fill="none"
+  //         stroke="#1a1916"
+  //         strokeWidth="0.8"
+  //       />
+  //       <rect
+  //         x="160"
+  //         y="60"
+  //         width="80"
+  //         height="50"
+  //         rx="6"
+  //         fill="none"
+  //         stroke="#1a1916"
+  //         strokeWidth="0.8"
+  //       />
+  //       <line
+  //         x1="140"
+  //         y1="65"
+  //         x2="160"
+  //         y2="75"
+  //         stroke="#1a1916"
+  //         strokeWidth="0.7"
+  //       />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   id: 3,
+  //   featured: false,
+  //   title: "Web Scraper",
+  //   description:
+  //     "A Python-based web scraper that extracts, parses, and structures data from target websites — built for reliability and easy extension to new sources.",
+  //   tags: ["Python", "BeautifulSoup", "Requests"],
+  //   demoUrl: "#",
+  //   status: "In progress",
+  //   thumbPattern: (
+  //     <svg
+  //       viewBox="0 0 300 180"
+  //       preserveAspectRatio="xMidYMid slice"
+  //       className={styles.thumbPatternSvg}
+  //     >
+  //       <defs>
+  //         <pattern
+  //           id="diag3"
+  //           width="16"
+  //           height="16"
+  //           patternUnits="userSpaceOnUse"
+  //         >
+  //           <path
+  //             d="M 0 16 L 16 0"
+  //             stroke="#1a1916"
+  //             strokeWidth="0.5"
+  //             fill="none"
+  //           />
+  //         </pattern>
+  //       </defs>
+  //       <rect width="100%" height="100%" fill="url(#diag3)" />
+  //       <rect
+  //         x="40"
+  //         y="50"
+  //         width="220"
+  //         height="14"
+  //         rx="3"
+  //         fill="none"
+  //         stroke="#1a1916"
+  //         strokeWidth="0.8"
+  //       />
+  //       <rect
+  //         x="40"
+  //         y="76"
+  //         width="160"
+  //         height="14"
+  //         rx="3"
+  //         fill="none"
+  //         stroke="#1a1916"
+  //         strokeWidth="0.8"
+  //       />
+  //       <rect
+  //         x="40"
+  //         y="102"
+  //         width="190"
+  //         height="14"
+  //         rx="3"
+  //         fill="none"
+  //         stroke="#1a1916"
+  //         strokeWidth="0.8"
+  //       />
+  //     </svg>
+  //   ),
+  // },
 ];
 
 const ArrowIcon = () => (
@@ -213,13 +213,9 @@ function SectionHead({ label }) {
 
 function ProjectCard({ project }) {
   return (
-    <div
-      className={`${styles.card} ${project.featured ? styles.cardFeatured : styles.cardRegular}`}
-    >
+    <div className={`${styles.card} ${styles.cardFeatured}`}>
       {/* Thumbnail */}
-      <div
-        className={`${styles.thumb} ${project.featured ? styles.thumbFeatured : styles.thumbRegular}`}
-      >
+      <div className={`${styles.thumb} ${styles.thumbFeatured}`}>
         {project.thumbPattern}
         <span className={styles.thumbNote}>Screenshot coming soon</span>
       </div>
