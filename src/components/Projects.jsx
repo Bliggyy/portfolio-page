@@ -1,70 +1,24 @@
 import styles from "../styles/Projects.module.css";
+import coverPage from "../images/cover-page.png";
 
 const projects = [
   {
     id: 1,
     featured: true,
-    title: "Order Management API",
+    title: "Order Management API (GameStore)",
     description:
-      "A game-oriented order management system built with ASP.NET Core and React. Handles order creation, tracking, and fulfillment flows through a clean REST API with a React front end.",
+      "A game-oriented order management system built with ASP.NET Core and React. Handles order creation and management through a clean REST API with a React front end.",
     tags: ["ASP.NET Core", "React", "C#", "REST API"],
     demoUrl: "https://bliggy-gamestore.vercel.app",
     status: "In progress",
     thumbPattern: (
-      <svg
+      <img
         viewBox="0 0 600 200"
         preserveAspectRatio="xMidYMid slice"
         className={styles.thumbPatternSvg}
-      >
-        <defs>
-          <pattern
-            id="grid1"
-            width="40"
-            height="40"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 40 0 L 0 0 0 40"
-              fill="none"
-              stroke="#1a1916"
-              strokeWidth="0.5"
-            />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid1)" />
-        <circle
-          cx="300"
-          cy="100"
-          r="60"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.8"
-        />
-        <circle
-          cx="300"
-          cy="100"
-          r="100"
-          fill="none"
-          stroke="#1a1916"
-          strokeWidth="0.5"
-        />
-        <line
-          x1="180"
-          y1="100"
-          x2="420"
-          y2="100"
-          stroke="#1a1916"
-          strokeWidth="0.6"
-        />
-        <line
-          x1="300"
-          y1="20"
-          x2="300"
-          y2="180"
-          stroke="#1a1916"
-          strokeWidth="0.6"
-        />
-      </svg>
+        src={coverPage}
+        alt="Project Thumbnail"
+      />
     ),
   },
   // {
